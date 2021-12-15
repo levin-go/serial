@@ -47,6 +47,8 @@ type RS485Config struct {
 	RtsHighAfterSend bool
 	// Rx during Tx
 	RxDuringTx bool
+	// 485 padding
+	Padding [5]uint32
 }
 
 // Port is the interface for controlling serial port.

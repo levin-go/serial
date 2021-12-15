@@ -237,7 +237,7 @@ func enableRS485(fd int, config *RS485Config) error {
 		rs485Enabled,
 		uint32(config.DelayRtsBeforeSend / time.Millisecond),
 		uint32(config.DelayRtsAfterSend / time.Millisecond),
-		[5]uint32{0, 0, 0, 0, 0},
+		config.Padding,
 	}
 
 	if config.RtsHighDuringSend {
